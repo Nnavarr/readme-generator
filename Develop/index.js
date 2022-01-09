@@ -93,8 +93,18 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    
+    // iterate through question objects
+
 }
 
 // Function call to initialize app
 init();
+
+/*
+// test iteration through question object
+Object.entries(questions).forEach((entry) =>{
+    // array destructure of entry (question parameters)
+    const [key, value] = entry;
+    console.log(value['type']);
+});
+*/
