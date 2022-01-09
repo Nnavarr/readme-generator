@@ -1,14 +1,21 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated README file generator based on user input",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Noe Navarro",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[2~\u001b[2~\u001b[2~\u0016\u001by: http:://github.com/Nnavarr/readme-generator"
+  },
+  "keywords": [
+    "readme"
+  ]
 }
