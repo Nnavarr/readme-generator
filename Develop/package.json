@@ -9,6 +9,7 @@
   "author": "Noe Navarro",
   "license": "ISC",
   "dependencies": {
+    "dedent": "^0.7.0",
     "inquirer": "^6.5.2"
   },
   "repository": {
@@ -19,4 +20,3 @@
     "readme"
   ]
 }
-
