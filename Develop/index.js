@@ -58,6 +58,13 @@ const questions = [
         message: 'Any guidelines for contributors?'
     },
 
+    // project test instructions
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What kind of tests does this project need?'
+    },
+
     // github name
     {
         type: 'input',
@@ -108,10 +115,12 @@ function init() {
         questions[4],
         // guidelines
         questions[5],
-        // github account
+        // tests
         questions[6],
+        // github account
+        questions[7],
         // email
-        questions[7]
+        questions[8]
     ])
     .then(responses => {
         responseArray.push(responses);
@@ -122,7 +131,6 @@ function init() {
 // Function call to initialize app
 init()
     .then(results => {
-        console.log(results[0]);
         // do something with the inquirer responses. This is what gets paassed into our final write file function
-        writeToFile('test', results);
+        writeToFile('README', results);
     })

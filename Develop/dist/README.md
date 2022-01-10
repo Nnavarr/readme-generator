@@ -1,18 +1,26 @@
 
-  # Project 1
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  # Project 22
 
   ## Description
-  description
+  The 22nd project in the saga
+
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
 
   ## Installation
-  a lot of steps
+  1. Download relevant files from the Github repository 
 
   ## Usage
-  test 1, test 2
+  Once downloaded, cd into the root directory. From there, simply run 'node app'
 
   
   ## License: MIT
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   
       MIT License
@@ -37,13 +45,19 @@
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
       SOFTWARE.
       
-  Additional Info: https://opensource.org/licenses/MIT
-    
+
+  Additional info: https://opensource.org/licenses/MIT
+  
+
+  ## Contributing 
+  If you would like to contrinbute to the project, please fork the repo. Any/all value adding contributions are welcome!
+
+  ## Tests
+  Test to ensure the file launches as intended
 
   ## Questions
-
-  Should you have any questions, please feel free to reach out. I can be reached via Github/Email as shown below.
+  Should you have any questions, I can be reached as shown below.
 
   Github: https://github.com/Nnavarr
-
   EmaiL: noe.navarro1019@gmail.com
+  

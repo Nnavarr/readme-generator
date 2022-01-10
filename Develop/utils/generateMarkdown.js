@@ -99,20 +99,21 @@ function renderLicenseSection(license) {
   } else {
     // generate license level info
     let licenseBadge = renderLicenseBadge(license);
-
     let licenseLink = renderLicenseLink(license);
-
     let licenseDescription = licenseObj[license].license
 
     // return string of final License section
-    return `
+    return [
+      // return badge separately
+      licenseBadge, 
+      `
   ## License: ${license}
-  ${licenseBadge}
   
   ${licenseDescription}
 
-  ${licenseLink}
-    `
+  Additional info: ${licenseLink}
+  `
+    ]
   }
 }
 
@@ -120,12 +121,20 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   // license section
   let licenseSection = renderLicenseSection(data[0].license)
+    return `
+  ${licenseSection[0]}
 
-  return `
   # ${data[0].title}
 
   ## Description
   ${data[0].description}
+
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
 
   ## Installation
   ${data[0].installation}
@@ -133,12 +142,20 @@ function generateMarkdown(data) {
   ## Usage
   ${data[0].usage}
 
-  ${licenseSection}
+  ${licenseSection[1]}
+
+  ## Contributing 
+  ${data[0].contributing}
+
+  ## Tests
+  ${data[0].tests}
 
   ## Questions
+  Should you have any questions, I can be reached as shown below.
+
   Github: https://github.com/Nnavarr
   EmaiL: noe.navarro1019@gmail.com
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
