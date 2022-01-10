@@ -152,8 +152,8 @@ function generateMarkdown(data) {
   ## Questions
   Should you have any questions, I can be reached as shown below.
 
-  Github: https://github.com/Nnavarr
-  EmaiL: noe.navarro1019@gmail.com
+  Github: ${data[0].github}
+  EmaiL: ${data[0].email}
   `;
 }
 
