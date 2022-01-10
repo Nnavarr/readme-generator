@@ -1,12 +1,10 @@
-const dedent = require('dedent');
-import dedent from "dedent";
 
 // License object to be used in license functions
 let licenseObj = {
   'Apache': {
     'link': 'https://www.apache.org/licenses/LICENSE-2.0',
     'badge': '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-    'license': dedent`
+    'license': `
       Copyright 2022 Noe Navarro
 
       Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +24,7 @@ let licenseObj = {
   'ISC': {
     'link': 'https://opensource.org/licenses/ISC',
     'badge': '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC',
-    'license': dedent`
+    'license': `
       ISC License
 
       Copyright (c) 2022 Noe Navarro
@@ -49,7 +47,7 @@ let licenseObj = {
     'link': 'https://opensource.org/licenses/MIT',
     'badge': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
     'license': 
-      dedent`
+      `
       MIT License
 
       Copyright (c) 2022 Noe Navarro
@@ -95,12 +93,51 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if(!license){
+    return '';
+  } else {
+    // generate license level info
+    let licenseBadge = renderLicenseBadge(license);
+
+    let licenseLink = renderLicenseLink(license);
+
+    let licenseDescription = licenseObj[license].license
+
+    // return string of final License section
+    return `
+  ## License: ${license}
+  ${licenseBadge}
+  
+  ${licenseDescription}
+
+  ${licenseLink}
+    `
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  // license section
+  let licenseSection = renderLicenseSection(data[0].license)
 
+  return `
+  # ${data[0].title}
+
+  ## Description
+  ${data[0].description}
+
+  ## Installation
+  ${data[0].installation}
+
+  ## Usage
+  ${data[0].usage}
+
+  ${licenseSection}
+
+  ## Questions
+  Github: https://github.com/Nnavarr
+  EmaiL: noe.navarro1019@gmail.com
 `;
 }
 
