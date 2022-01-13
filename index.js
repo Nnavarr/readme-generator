@@ -84,7 +84,7 @@ const questions = [
 function writeToFile(fileName, data) {
     // return a promise and write file
     return new Promise((resolve, reject) =>{
-        fs.writeFile(`./dist/${fileName}.md`, generateMarkdown(data), err =>{
+        fs.writeFile(`./Generated-${fileName}.md`, generateMarkdown(data), err =>{
             // if error, reject promise and let the user know
             if(err){
                 reject(err);
